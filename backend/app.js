@@ -2,7 +2,7 @@ var express = require('express');
 const mongodb = require('./db/connect');
 var app = express();
 
-const port = process.env.PORT || 3080;
+const port = process.env.PORT || 8080;
 
 app.use('/', require('./routes'));
 
