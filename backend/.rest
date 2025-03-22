@@ -1,0 +1,4 @@
+GET http://localhost:3080 HTTP/1.1
+
+###
+GET http://localhost:3080/another HTTP/1.1
