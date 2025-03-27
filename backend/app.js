@@ -1,11 +1,10 @@
 var express = require('express');
-const mongodb = require('./db/connect');
+const mongodb = require('./data/database');
 var app = express();
 
 const port = process.env.PORT || 8080;
 
-app.use('/', require('./routes/routes'));
-app.use('/professional', require('./routes/routes'));
+app.use('/', require('./routes'));
 
 mongodb.initDb((err) => {
     if (err) {

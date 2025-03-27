@@ -1,5 +1,5 @@
 GET http://localhost:8080/ HTTP/1.1
 ###
-GET http://localhost:8080/professional HTTP/1.1
+GET http://localhost:8080/contacts/ HTTP/1.1
 ###
-GET http://localhost:8080/ HTTP/1.1
+GET http://localhost:8080/contacts/67debf68de870028adc405df HTTP/1.1
