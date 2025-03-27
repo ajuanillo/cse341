@@ -9,11 +9,12 @@ const getAll = async (req, res) => {
     });
 }
 const getSingle = async (req, res) => {
-    const contactId = new ObjectId("67debfd9de870028adc405e2");
+    // Get the ID from request parameters
+    const contactId = new ObjectId(req.params.Id);
     const result = await mongodb.getDb().db().collection('contacts').find({ _id: contactId });
     result.toArray().then((contacts) => {
         res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(contacts);
+        res.status(200).json(contacts[0]); // Return first match only
     });
 }
 module.exports = { getAll ,getSingle}; 
