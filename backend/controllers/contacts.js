@@ -17,4 +17,4 @@ const getSingle = async (req, res) => {
         res.status(200).json(contacts[0]); // Return first match only
     });
 }
-module.exports = { getAll ,getSingle}; 
+module.exports = { getAll, getSingle }; 
